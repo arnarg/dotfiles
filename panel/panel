@@ -1,0 +1,74 @@
+#! /bin/sh
+
+. panel_vars
+
+PANEL_HEIGHT=22
+
+if [ $(pgrep -cx panel) -gt 1 ] ; then
+	printf "%s\n" "The panel is already running." >&2
+	exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+bspc config top_padding $PANEL_HEIGHT
+bspc control --subscribe > "$PANEL_FIFO" &
+xtitle -sf 'T%s' > "$PANEL_FIFO" &
+vol.sh &
+
+# datetime
+while true;
+	do
+		echo 'D' $(date '+%a %d %b %H:%M');
+		sleep 1m;
+done > "$PANEL_FIFO" &
+
+# battery
+while true;
+	do
+		STATUS=$(acpi -b | awk '{print $3}' | sed 's/,//');
+		BATT_LEVEL=$(acpi -b | grep -o '[[:digit:]]\+%' | sed 's/%//');
+		if [ $STATUS == "Charging" ]
+		then
+			ICON=$CHARGING
+		else
+			if [ $BATT_LEVEL -ge 80 ]
+			then
+				ICON=$BATT_FULL
+			fi
+			if [ $BATT_LEVEL -ge 60 -a $BATT_LEVEL -lt 80 ]
+			then
+				ICON=$BATT_3QUART
+			fi
+			if [ $BATT_LEVEL -ge 20 -a $BATT_LEVEL -lt 60 ]
+			then
+				ICON=$BATT_HALF
+			fi
+			if [ $BATT_LEVEL -lt 20 ]
+			then
+				ICON="%{F$COLOR_RED}"$BATT_QUART
+			fi
+		fi
+		echo 'B'$ICON $BATT_LEVEL%"%{F-}"
+		sleep 1m;
+done > "$PANEL_FIFO" &
+
+# wifi
+while true;
+	do
+		WIFI_SSID=$(iw wlp3s0 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//');
+		if [ -z $WIFI_SSID ]
+		then
+			echo 'P'"%{F$COLOR_RED}"$WIFI "Down%{F-}"
+		else
+			echo 'P'$WIFI $WIFI_SSID
+		fi
+		sleep 10;
+done > "$PANEL_FIFO" &
+
+cat "$PANEL_FIFO" | panel_bar | lemonbar -g x$PANEL_HEIGHT -f "$TEXT_FONT" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" &
+
+wait

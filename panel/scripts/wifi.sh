@@ -1,6 +1,7 @@
 #! /bin/bash
 
-source config
+dir=$(dirname $0)
+source $dir/config
 
 wifi() {
 	WIFI_SSID=$(iw wlp3s0 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//');

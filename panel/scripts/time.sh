@@ -1,6 +1,7 @@
 #! /bin/bash
 
-source config
+dir=$(dirname $0)
+source $dir/config
 
 while true;
 	do

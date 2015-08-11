@@ -1,10 +1,7 @@
 #! /bin/bash
 
-#source config
-# When this script is run by sxhkd it doesn't source the config
-# script for some reason, therefor I hardcode the values in this file
-PANEL_FIFO=/tmp/panel-fifo
-COLOR_RED="#eb6067"
+dir=$(dirname $0)
+source $dir/config
 
 # Only change volume if a parameter was provided
 if ! [ -z $1 ]

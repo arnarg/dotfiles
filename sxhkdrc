@@ -90,10 +90,10 @@ super + Escape
 # laptop
 
 XF86AudioRaiseVolume
-	vol.sh +
+	$XDG_CONFIG_HOME/panel/scripts/vol.sh +
 
 XF86AudioLowerVolume
-	vol.sh -
+	$XDG_CONFIG_HOME/panel/scripts/vol.sh -
 
 XF86AudioMute
-	vol.sh M
+	$XDG_CONFIG_HOME/panel/scripts/vol.sh M

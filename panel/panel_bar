@@ -2,7 +2,8 @@
 #
 # Example panel for LemonBoy's bar
 
-. panel_vars
+dir=$(dirname $0)
+source $dir/scripts/config
 
 num_mon=$(bspc query -M | wc -l)
 

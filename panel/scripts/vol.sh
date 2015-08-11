@@ -1,4 +1,10 @@
-. panel_vars
+#! /bin/bash
+
+#source config
+# When this script is run by sxhkd it doesn't source the config
+# script for some reason, therefor I hardcode the values in this file
+PANEL_FIFO=/tmp/panel-fifo
+COLOR_RED="#eb6067"
 
 # Only change volume if a parameter was provided
 if ! [ -z $1 ]
@@ -22,9 +28,9 @@ volume=$(amixer sget 'Master' | awk 'NR==6 {print $5}' | sed -r 's/\[([0-9]+)%\]
 if [ $muted == "off" ]
 then
 	icon="";
-	echo 'V'"%{F$COLOR_RED}"$icon "Mute%{F-}" > $PANEL_FIFO
+	echo 'V'"%{F$COLOR_RED}"$icon "Mute%{F-}" > "$PANEL_FIFO"
 elif [ $muted == "on" ]
 then
 	icon="";
-	echo 'V'$icon $volume% > $PANEL_FIFO
+	echo 'V'$icon $volume% > "$PANEL_FIFO"
 fi

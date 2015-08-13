@@ -1,0 +1,5 @@
+directory: /mnt/Flakkari/Music
+library: /mnt/Flakkari/Music/musiclibrary.blb
+color: yes
+import:
+    move: yes

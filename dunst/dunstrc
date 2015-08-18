@@ -143,10 +143,10 @@
     browser = /usr/bin/firefox -new-tab
 
     # Align icons left/right/off
-    icon_position = off
+    icon_position = left
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/Numix/16x16/status/:/usr/share/icons/Numix/16x16/devices/
+    icon_folders = /home/arnar/.config/dunst/icons
 
 [frame]
     width = 0
@@ -179,16 +179,19 @@
     background = "#222222"
     foreground = "#888888"
     timeout = 10
+    icon = /home/arnar/.config/dunst/icons/info.png
 
 [urgency_normal]
     background = "#6699cc"
     foreground = "#ffffff"
     timeout = 10
+    icon = /home/arnar/.config/dunst/icons/info.png
 
 [urgency_critical]
     background = "#eb6067"
     foreground = "#ffffff"
     timeout = 0
+    icon = /home/arnar/.config/dunst/icons/danger.png
 
 
 # Every section that isn't one of the above is interpreted as a rules to
@@ -244,3 +247,9 @@
 #    urgency = normal
 #
 # vim: ft=cfg
+
+# Facebook messenger
+[messenger]
+    appname = Messenger
+    new_icon = /home/arnar/.config/dunst/icons/facebook.png
+    format = "<b>%s:</b> %b"

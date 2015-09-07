@@ -47,7 +47,7 @@
 *color15:				t_current_line
 
 ! urxvt specific
-urxvt*font:				xft:Inconsolata:size=10
+urxvt*font:				xft:Inconsolata:size=10,xft:Inconsolata\ for\ Powerline:size=10
 urxvt*scrollBar:		false
 urxvt*cursorBlink:		true
 

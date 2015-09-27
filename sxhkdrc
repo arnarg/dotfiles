@@ -87,7 +87,7 @@ super + Return
 	urxvt
 
 super + space
-	j4-dmenu-desktop --dmenu="dmenu -i -b -nb '#232d30' -sb '#232d30' -sf '#f7faff' -nf '#a4a7ab'"
+	j4-dmenu-desktop --dmenu="rofi -i -dmenu -show -p 'run: '"
 
 # make sxhkd reload its configuration files:
 super + Escape

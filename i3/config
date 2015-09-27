@@ -22,6 +22,9 @@ new_float pixel 2
 exec --no-startup-id sh ~/.fehbg
 exec xrdb ~/.Xresources
 
+# Lock
+bindsym $mod+l exec ~/.dotfiles/lock.sh
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -35,10 +38,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+space exec j4-dmenu-desktop --dmenu="rofi -i -dmenu -show -p 'run: '"
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ae focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+ae focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -167,3 +170,13 @@ bar {
 
 # Dunst
 exec dunst
+
+# Volume control
+# For desktop
+bindsym $mod+KP_Add exec "~/.config/i3/scripts/vol.sh +"
+bindsym $mod+KP_Subtract exec "~/.config/i3/scripts/vol.sh -"
+bindsym $mod+m exec "~/.config/i3/scripts/vol.sh M"
+# For laptop
+bindsym XF86AudioRaiseVolume exec "~/.config/i3/scripts/vol.sh +"
+bindsym XF86AudioLowerVolume exec "~/.config/i3/scripts/vol.sh -"
+bindsym XF86AudioMute exec "~/.config/i3/scripts/vol.sh M"

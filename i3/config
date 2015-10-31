@@ -18,6 +18,9 @@ gaps outer 0
 new_window pixel 2
 new_float pixel 2
 
+# Sticky windows
+bindsym $mod+Shift+s sticky toggle
+
 # Startup applications
 exec --no-startup-id sh ~/.fehbg
 exec xrdb ~/.Xresources

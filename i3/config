@@ -27,6 +27,9 @@ new_float pixel 2
   client.unfocused          $background $background $statusline     $background
   client.urgent             $red        $red        $statusline     $red
 
+# Sticky windows
+bindsym $mod+Shift+s sticky toggle
+
 # Startup applications
 exec --no-startup-id sh ~/.fehbg
 exec xrdb ~/.Xresources

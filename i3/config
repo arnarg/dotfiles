@@ -5,6 +5,8 @@ set $statusline       #A4A7AB
 set $lighter          #F7FAFF
 set $red              #EB6067
 set $green            #B0D182
+set $accent           #4eb5ab
+set $indicator        #6DEDE1
 
 set $mod Mod4
 
@@ -17,6 +19,13 @@ gaps inner 6
 gaps outer 0
 new_window pixel 2
 new_float pixel 2
+
+# Theme
+# colorclass                border      background  text            indicator
+  client.focused            $accent     $accent     $background     $indicator
+  client.focused_inactive   $background $background $statusline     $background
+  client.unfocused          $background $background $statusline     $background
+  client.urgent             $red        $red        $statusline     $red
 
 # Sticky windows
 bindsym $mod+Shift+s sticky toggle
@@ -33,6 +42,9 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+
+# Focus should not follow the mouse
+focus_follows_mouse no
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -155,7 +167,6 @@ bar {
     mode dock
     font pango:Inconsolata 10, FontAwesome 10
     strip_workspace_numbers yes
-    tray_output primary
     height 22
 
     colors {

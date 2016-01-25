@@ -194,3 +194,6 @@ bindsym $mod+m exec "~/.config/i3/scripts/vol.sh M"
 bindsym XF86AudioRaiseVolume exec "~/.config/i3/scripts/vol.sh +"
 bindsym XF86AudioLowerVolume exec "~/.config/i3/scripts/vol.sh -"
 bindsym XF86AudioMute exec "~/.config/i3/scripts/vol.sh M"
+
+# VPN
+bindsym $mod+p exec ~/.config/i3/scripts/start-vpn.sh

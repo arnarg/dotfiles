@@ -1,4 +1,5 @@
 #!/bin/bash
+# dependencies: openvpn, rofi
 
 cd /etc/openvpn
 

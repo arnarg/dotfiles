@@ -197,3 +197,6 @@ bindsym XF86AudioMute exec "~/.config/i3/scripts/vol.sh M"
 
 # VPN
 bindsym $mod+p exec ~/.config/i3/scripts/start-vpn.sh
+
+# Backlight
+bindsym $mod+b exec ~/.config/i3/scripts/backlight.sh

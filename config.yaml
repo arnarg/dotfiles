@@ -1,5 +1,5 @@
-directory: /mnt/Flakkari/Music
-library: /mnt/Flakkari/Music/musiclibrary.blb
+directory: /mnt/Music
+library: /mnt/Music/musiclibrary.blb
 plugins: ftintitle
 import:
     move: yes

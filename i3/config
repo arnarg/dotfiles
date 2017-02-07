@@ -8,7 +8,7 @@ set $green            #B0D182
 set $accent           #4eb5ab
 set $indicator        #6DEDE1
 
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -186,17 +186,12 @@ bar {
 exec dunst
 
 # Volume control
-# For desktop
-bindsym $mod+KP_Add exec "~/.config/i3/scripts/vol.sh +"
-bindsym $mod+KP_Subtract exec "~/.config/i3/scripts/vol.sh -"
-bindsym $mod+m exec "~/.config/i3/scripts/vol.sh M"
-# For laptop
 bindsym XF86AudioRaiseVolume exec "~/.config/i3/scripts/vol.sh +"
 bindsym XF86AudioLowerVolume exec "~/.config/i3/scripts/vol.sh -"
 bindsym XF86AudioMute exec "~/.config/i3/scripts/vol.sh M"
 
-# VPN
-bindsym $mod+p exec ~/.config/i3/scripts/start-vpn.sh
+# Toggle keymap
+bindsym $mod+k exec "~/.config/i3/scripts/keymap.sh toggle"
 
 # Backlight
 bindsym $mod+b exec ~/.config/i3/scripts/backlight.sh

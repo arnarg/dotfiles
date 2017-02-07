@@ -3,15 +3,15 @@
 dir=$(dirname $0)
 source $dir/config
 
-curr_keymap=$(setxkbmap -query | awk 'NR==3 {print $2}')
+curr_keymap=$(setxkbmap -query | awk 'NR==3 {print toupper($2)}')
 
 if [[ $1 = "toggle" ]]
 then
 	case "$curr_keymap" in
-		is)
+		IS)
 			setxkbmap us
 			;;
-		us)
+		US)
 			setxkbmap is
 			;;
 	esac

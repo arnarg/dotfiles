@@ -62,3 +62,9 @@ urxvt*internalBorder:	5
 rofi.font:				xft:Inconsolata 20
 rofi.lines:				5
 rofi.width:				30
+rofi.bw:                                2
+rofi.color-enabled:                     true
+rofi.color-window:                      t_background, #4eb5ab, #4eb5ab
+rofi.color-normal:                      t_background, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active:                      t_background, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent:                      t_background, #ff1844, #273238, #394249, #ff1844

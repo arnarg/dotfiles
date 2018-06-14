@@ -190,6 +190,11 @@ bindsym XF86AudioRaiseVolume exec "~/.config/i3/scripts/vol.sh +"
 bindsym XF86AudioLowerVolume exec "~/.config/i3/scripts/vol.sh -"
 bindsym XF86AudioMute exec "~/.config/i3/scripts/vol.sh M"
 
+# Spotify
+bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+
 # Toggle keymap
 bindsym $mod+k exec "~/.config/i3/scripts/keymap.sh toggle"
 

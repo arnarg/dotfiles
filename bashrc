@@ -18,6 +18,3 @@ export HISTCONTROL=ignoreboth
 
 # default editor
 export EDITOR=vim
-
-# enable notes app
-. ~/.notes.sh

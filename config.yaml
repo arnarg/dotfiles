@@ -1,5 +1,0 @@
-directory: /mnt/Music
-library: /mnt/Music/musiclibrary.blb
-plugins: ftintitle
-import:
-    move: yes

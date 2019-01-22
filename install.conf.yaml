@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.xinitrc: xinitrc
+    ~/.Xresources: Xresources
+    ~/.config/i3: i3
+    ~/.config/pulse/daemon.conf: pulse/daemon.conf
+    ~/.config/pulse/default.pa: pulse/default.pa

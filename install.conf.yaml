@@ -13,3 +13,4 @@
     ~/.config/i3: i3
     ~/.config/pulse/daemon.conf: pulse/daemon.conf
     ~/.config/pulse/default.pa: pulse/default.pa
+    "~/.config/Code - OSS/User/settings.json": code/settings.json

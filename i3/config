@@ -165,7 +165,7 @@ bar {
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
     position top
     mode dock
-    font pango:Inconsolata 10, FontAwesome 10
+    font pango:Inconsolata 10, Icons 10
     strip_workspace_numbers yes
     height 22
 

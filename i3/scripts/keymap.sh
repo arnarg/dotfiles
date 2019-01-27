@@ -21,4 +21,4 @@ then
 fi
 
 icon=""
-echo "$icon  $curr_keymap"
+echo "$icon $curr_keymap"

@@ -41,7 +41,7 @@ bindsym $mod+l exec ~/.dotfiles/lock.sh
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # Focus should not follow the mouse
 focus_follows_mouse no

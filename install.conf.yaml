@@ -15,3 +15,4 @@
     ~/.config/pulse/default.pa: pulse/default.pa
     "~/.config/Code - OSS/User/settings.json": code/settings.json
     ~/.config/nvim: nvim
+    ~/.config/alacritty: alacritty

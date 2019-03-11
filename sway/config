@@ -27,6 +27,16 @@ set $term alacritty
 # Application launcher
 set $menu dmenu_path | bemenu | xargs swaymsg exec
 
+###########
+## Input ##
+###########
+
+# Set US keyboard layout
+input * xkb_layout us
+
+# Enable NumLock
+input * xkb_numlock enabled
+
 
 ############
 ## Output ##

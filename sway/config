@@ -11,6 +11,16 @@ set $down j
 set $up k
 set $right l
 
+# Colors
+set $background       #232D30
+set $light_background #34474D
+set $statusline       #A4A7AB
+set $lighter          #F7FAFF
+set $red              #EB6067
+set $green            #B0D182
+set $accent           #4eb5ab
+set $indicator        #6DEDE1
+
 # Alacritty terminal
 set $term alacritty
 
@@ -155,6 +165,13 @@ exec swayidle -w \
  new_window pixel 2
  new_float pixel 2
 
+## Theme
+
+# colorclass                border      background  text            indicator	child_border
+  client.focused            $accent     $accent     $background     $indicator	$accent
+  client.focused_inactive   $background $background $statusline     $background	$background
+  client.unfocused          $background $background $statusline     $background	$background
+  client.urgent             $red        $red        $statusline     $red	$red
 
 ##############
 ## Resizing ##

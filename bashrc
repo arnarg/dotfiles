@@ -17,3 +17,6 @@ export HISTCONTROL=ignoreboth
 
 # default editor
 export EDITOR=vim
+
+# Go stuff
+export GOPATH=~/go

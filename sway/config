@@ -172,8 +172,7 @@ exec swayidle -w \
 
 ## Border
 
- new_window pixel 2
- new_float pixel 2
+ default_border pixel 2
 
 ## Theme
 

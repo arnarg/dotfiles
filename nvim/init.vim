@@ -23,6 +23,9 @@ Plug 'junegunn/fzf.vim'
 " Golang support
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
+" Nix support
+Plug 'LnL7/vim-nix'
+
 " Terraform support
 Plug 'hashivim/vim-terraform'
 
@@ -47,6 +50,11 @@ Plug 'mihaifm/bufstop'
 
 call plug#end()
 
+""""""""""
+" VIM-GO "
+""""""""""
+
+let g:go_bin_path = $HOME."/go/bin"
 
 """"""""""""
 " NERDTREE "

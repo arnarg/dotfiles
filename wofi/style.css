@@ -1,0 +1,21 @@
+window {
+	border: 3px solid #4eb5ab;
+	background-color: #282C34;
+	color: #abb2bf;
+	font-size: 22px;
+}
+
+#input {
+	background-color: #282C34;
+	border-radius: 0;
+	border: 0;
+	border-bottom: 3px solid #4eb5ab;
+	margin: 3px;
+	color: inherit;
+	font-size: 24px;
+}
+
+#inner-box {
+	padding: 6px;
+}
+

@@ -1,0 +1,57 @@
+typeset -U path cdpath fpath manpath
+
+################
+# ZSH SETTINGS #
+################
+
+setopt HIST_IGNORE_SPACE
+setopt HIST_FCNTL_LOCK
+setopt HIST_IGNORE_DUPS
+unsetopt HIST_EXPIRE_DUPS_FIRST
+unsetopt EXTENDED_HISTORY
+
+HISTFILE="$ZDOTDIR/history"
+HISTSIZE="50000"
+SAVEHIST="500000"
+
+PLUGINS_DIR="$ZDOTDIR/plugins"
+
+###############
+# PURE PROMPT #
+###############
+
+path+="$PLUGINS_DIR/pure"
+fpath+="$PLUGINS_DIR/pure"
+
+if [ -f "$PLUGINS_DIR/pure/pure.zsh" ]; then
+	source "$PLUGINS_DIR/pure/pure.zsh"
+fi
+
+export PURE_GIT_PULL="0"
+export PURE_PROMPT_SYMBOL=">>"
+export PURE_PROMPT_VICMD_SYMBOL="<<"
+
+zstyle ':prompt:pure:path' color red
+zstyle ':prompt:pure:prompt:success' color white
+
+################
+# KEY BINDINGS #
+################
+
+bindkey -v
+bindkey -a '^[[3~' vi-delete
+bindkey -a 'H' beginning-of-line
+bindkey -a 'F' end-of-line
+
+# Fix backspace not working after returning from cmd mode
+bindkey '?' backward-delete-char
+bindkey '^h' backward-delete-char
+
+#######
+# FZF #
+#######
+
+if [ -d "/usr/share/fzf" ]; then
+	source "/usr/share/fzf/completion.zsh"
+	source "/usr/share/fzf/key-bindings.zsh"
+fi

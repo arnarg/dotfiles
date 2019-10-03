@@ -8,6 +8,8 @@
 
 - link:
     ~/.bashrc: bashrc
+    ~/.zshenv: zsh/zshenv
+    ~/.config/zsh/.zshrc: zsh/zshrc
     ~/.config/pulse/daemon.conf: pulse/daemon.conf
     ~/.config/pulse/default.pa: pulse/default.pa
     ~/.config/nvim: nvim

@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: inconsolata;
-    font-size: 14px;
+    font-size: 16pt;
     min-height: 0;
 }
 
@@ -25,31 +25,31 @@ window#waybar.solo {
 */
 
 #workspaces button {
-    padding: 0 4px;
-    margin: 0 2px;
+    padding: 0 10px;
+    margin: 0;
     background-color: transparent;
     color: #ffffff;
-    border-bottom: 3px solid transparent;
+    border-bottom: 4px solid transparent;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: transparent;
     box-shadow: inherit;
-    border-bottom: 3px solid #727884;
+    border-bottom: 4px solid #727884;
 }
 
 #workspaces button.focused {
-    border-bottom: 3px solid #afb3bc;
+    border-bottom: 4px solid #afb3bc;
 }
 
 #workspaces button.urgent {
-    border-bottom: 3px solid #eb4d4b;
+    border-bottom: 4px solid #eb4d4b;
 }
 
 #mode {
     background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
 }
 
 #clock,
@@ -60,9 +60,9 @@ window#waybar.solo {
 #mode,
 #idle_inhibitor {
     padding: 0 10px;
-    margin: 0 4px;
+    margin: 0 6px;
     color: #ffffff;
-    border-bottom: 3px solid;
+    border-bottom: 4px solid;
 }
 
 #clock {

@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "height": 24,
+    "height": 40,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": ["network", "memory", "clock"],

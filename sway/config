@@ -32,10 +32,13 @@ set $menu j4-dmenu-desktop --dmenu="bemenu -ibp '>' --tb '#4eb5ab' --tf '#181b21
 ###########
 
 # Set US keyboard layout
-input * xkb_layout us
+input * xkb_layout "us,is"
 
 # Enable NumLock
 input * xkb_numlock enabled
+
+# Keyboard shortcut for switching between keyboard layouts
+bindsym $mod+t exec swaymsg "input * xkb_switch_layout `swaymsg -r -t get_inputs | jq '[.[].xkb_active_layout_index | select(. != null)] | unique | (.[0] + 1) % 2'`"
 
 
 ############

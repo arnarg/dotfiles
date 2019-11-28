@@ -40,6 +40,10 @@ input * xkb_numlock enabled
 # Keyboard shortcut for switching between keyboard layouts
 bindsym $mod+t exec swaymsg "input * xkb_switch_layout `swaymsg -r -t get_inputs | jq '[.[].xkb_active_layout_index | select(. != null)] | unique | (.[0] + 1) % 2'`"
 
+# Scrolling using my trackball with a button press
+swaymsg "input 1390:306:ELECOM_TrackBall_Mouse_DEFT_Pro_TrackBall scroll_method on_button_down"
+swaymsg "input 1390:306:ELECOM_TrackBall_Mouse_DEFT_Pro_TrackBall scroll_button 279"
+
 
 ############
 ## Output ##
